@@ -1,0 +1,5 @@
+threadAlloc : threadAlloc.o
+	gcc threadAlloc.o -o threadAlloc -lpthread 
+threadAlloc.o : threadAlloc.c
+	gcc -g -c threadAlloc.c -o threadAlloc.o -lpthread -std=c99
+

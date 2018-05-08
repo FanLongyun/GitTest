@@ -1,0 +1,4 @@
+createthread : createthread.o
+	gcc createthread.o -o createthread -lpthread
+createthread.o : createthread.c
+	gcc -g -c createthread.c -o createthread.o -lpthread -std=c99

@@ -1,0 +1,4 @@
+jointhread : jointhread.o
+	gcc jointhread -o jointhread.o -lpthread
+jointhread.o : jointhread.c
+	gcc -c -g jointhread.c -o jointhread 

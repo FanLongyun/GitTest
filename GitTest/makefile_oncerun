@@ -1,0 +1,5 @@
+oncerun : oncerun.o
+	gcc -o oncerun oncerun.o -lpthread
+oncerun.o : oncerun.c
+	gcc -g -c oncerun.c -o oncerun.o -std=c99 -lpthread
+

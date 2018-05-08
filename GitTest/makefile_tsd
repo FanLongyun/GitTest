@@ -1,0 +1,4 @@
+tsd : tsd.o
+	gcc tsd.o -o tsd -lpthread
+tsd.o : tsd.c
+	gcc -c -g tsd.c -o tsd.o -lpthread -std=c99

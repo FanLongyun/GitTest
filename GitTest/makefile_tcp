@@ -1,0 +1,4 @@
+tcptest : tcptest.o
+	gcc tcptest -o tcptest.o
+tcptest.o : tcpTest.c
+	gcc -g -g tcpTest.c -o tcptest.o -std=c99
