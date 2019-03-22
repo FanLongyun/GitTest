@@ -4,7 +4,7 @@ using namespace std;
 class Request
 {
 public:
-	Request(const char *request) : information(request){}
+	Request(char *request) : information(request){}
 	char *information;
 };
 
@@ -22,7 +22,8 @@ public:
 class TheChain : public Chain
 {
 public:
-	TheChain(const char* identity) : id(identity){}
+	char *id;
+	TheChain(char* identity) : id(identity){}
 	virtual bool getIdentity(char *identity)
 	{
 		return !strcmp(id, identity);
@@ -36,7 +37,7 @@ public:
 	}
 	virtual void solveRequest()
 	{
-		cout<< *id << "solved." << endl;
+		cout<< *id <<" "<< "solved." << endl;
 	}
 	virtual void setNextChain(Chain* chain)
 	{
